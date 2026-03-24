@@ -1,34 +1,147 @@
+/* Estilos globales para el cuerpo de la página */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, rgba(209, 66, 66, 0.856) 0%, rgb(160, 160, 160) 40%, rgb(184, 150, 150) 70%, rgb(119, 93, 93) 100%);
-  min-height: 100vh;
+  margin: 0; /* Elimina márgenes por defecto */
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+  -webkit-font-smoothing: antialiased; /* Suaviza texto en WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Suaviza texto en Firefox */
+  background: /* Fondo animado con gradientes */
+    linear-gradient(-45deg, #1e40af, #3b82f6, #60a5fa, #93c5fd, #e0f2fe, #f8fafc, #f1f5f9),
+    linear-gradient(-45deg, #334155, #475569, #64748b, #94a3b8, #cbd5e1, #e2e8f0, #f1f5f9);
+  background-size: 500% 500%, 500% 500%; /* Tamaño para animación */
+  animation: gradientShift 15s ease infinite; /* Animación del gradiente */
+  min-height: 100vh; /* Altura mínima de viewport */
+  color: #333; /* Color de texto por defecto */
+}
+
+/* Animación para el cambio de gradiente */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%, 0% 50%; }
+  25% { background-position: 25% 25%, 25% 25%; }
+  50% { background-position: 50% 50%, 50% 50%; }
+  75% { background-position: 75% 75%, 75% 75%; }
+  100% { background-position: 0% 50%, 0% 50%; }
 }
 
 #root {
-  min-height: 100vh;
+  min-height: 100vh; /* Asegura que el root ocupe toda la altura */
 }
 
 .container-custom {
-  background: rgb(255, 255, 255);
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  padding: 24px;
-  border: 1px solid rgb(128, 128, 128);
+  background: rgba(255, 255, 255, 0.95); /* Fondo semi-transparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.1), /* Sombra externa */
+    0 10px 20px rgba(0,0,0,0.06), /* Sombra media */
+    inset 0 1px 0 rgba(255,255,255,0.8); /* Sombra interna para brillo */
+  padding: 32px; /* Espaciado interno */
+  border: 1px solid rgba(30, 58, 138, 0.1); /* Borde sutil */
+  margin: 20px auto; /* Centrado con margen */
+  max-width: 1400px; /* Ancho máximo */
 }
 
-.card-custom {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px); 
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white; 
+/* Estilos para la tabla elegante */
+.table-custom {
+  background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  backdrop-filter: blur(12px); /* Desenfoque de fondo */
+  border-radius: 16px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que sobresale */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* Sombra */
+  border: 1px solid rgba(30, 58, 138, 0.1); /* Borde */
+}
+
+.table-custom thead th {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8); /* Gradiente azul para header */
+  color: white; /* Texto blanco */
+  font-weight: 600; /* Peso de fuente */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra de texto */
+  position: sticky; /* Fija el header */
+  top: 0; /* Posición superior */
+  z-index: 5; /* Z-index para estar encima */
+  padding: 18px 16px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+.table-custom tbody tr:nth-child(even) {
+  background: rgba(30, 58, 138, 0.02); /* Fondo alterno para filas pares */
+}
+
+.table-custom tbody tr:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(30, 58, 138, 0.1)); /* Gradiente en hover */
+  transform: translateY(-1px); /* Elevación sutil */
+}
+
+.table-custom tbody td {
+  padding: 16px; /* Espaciado interno */
+  vertical-align: middle; /* Alineación vertical */
+  border-color: rgba(226, 232, 240, 0.5); /* Color de borde */
+  color: #374151; /* Color de texto */
+  font-weight: 500; /* Peso de fuente */
+}
+
+.table-custom .btn-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706); /* Gradiente amarillo */
+  border: none; /* Sin borde */
+  color: #212529; /* Texto oscuro */
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3); /* Sombra */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.table-custom .btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626); /* Gradiente rojo */
+  border: none; /* Sin borde */
+  color: white; /* Texto blanco */
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3); /* Sombra */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.table-custom .btn:hover {
+  transform: translateY(-2px); /* Elevación en hover */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important; /* Sombra más fuerte */
+}
+
+/* Estilos para formularios elegantes */
+.form-control {
+  border-radius: 12px; /* Bordes redondeados */
+  border: 2px solid rgba(226, 232, 240, 0.8); /* Borde sutil */
+  padding: 14px 18px; /* Espaciado interno */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+  background: rgba(255,255,255,0.9); /* Fondo semi-transparente */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil */
+}
+
+.form-control:focus {
+  border-color: #3b82f6; /* Borde azul en foco */
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0,0,0,0.1); /* Sombra de foco */
+  background: white; /* Fondo blanco */
+  transform: translateY(-1px); /* Elevación */
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669); /* Gradiente verde */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); /* Sombra */
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Gradiente azul */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3); /* Sombra */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Elevación en hover */
+}
+
+.alert {
+  border-radius: 12px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; /* Fuente para código */
 }
