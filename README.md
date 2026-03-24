@@ -73,11 +73,6 @@ Hugo Casas
 ... +47 más
 ```
 
-## 📚 Documentación Completa
-
-- [SPECIFICACIONES.md](SPECIFICACIONES.md) ← Detalles técnicos
-- [TODO.md](TODO.md) ← Progreso desarrollo
-
 ## 🎨 Tecnologías
 
 ![React](https://img.shields.io/badge/React-18-blue)
