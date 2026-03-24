@@ -1,3 +1,7 @@
+# Presentación del Proyecto: Gestor de Contactos
+
+## Fecha: 24 de marzo de 2026
+
 ### Equipo: Maicol (Desarrollador)
 
 ---
@@ -18,7 +22,7 @@ El proyecto es un **Gestor de Contactos** que permite buscar, crear, editar y el
 - **Base de Datos**: 
   - Principal: Oracle Service Cloud (API externa)
   - Caché: SQLite local para offline/respaldo
-- **Comunicación**: HTTP/REST 
+- **Comunicación**: HTTP/REST con Axios
 
 ### Diagrama de Arquitectura
 ```
@@ -44,7 +48,10 @@ El proyecto es un **Gestor de Contactos** que permite buscar, crear, editar y el
   - Bootstrap: Estilos CSS
 - **Backend**:
   - Axios: Cliente HTTP para Oracle API
-  - SQLite3: Base de datos loca
+  - SQLite3: Base de datos local
+  - CORS: Cross-Origin Resource Sharing
+  - Body-parser: Parseo de JSON
+  - Nodemon: Desarrollo con recarga automática
 
 ### Herramientas de Desarrollo
 - **VS Code**: Editor de código
@@ -169,4 +176,14 @@ npm start    # Puerto 3000
 - Notificaciones en tiempo real
 
 ---
+
+## 9. Preguntas y Respuestas
+
+¿Preguntas para la presentación?
+
+---
+
 **Fin de la Presentación**
+
+*Proyecto desarrollado con VS Code y GitHub Copilot*</content>
+<parameter name="filePath">c:\Users\Maicol\Reto\PRESENTACION.md
