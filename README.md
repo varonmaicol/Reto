@@ -8,7 +8,7 @@
 
 ```
 Backend: http://localhost:3001/api/contacts
-Frontend: http://localhost:3002
+Frontend: http://localhost:3000
 ```
 
 ## 📋 Características
@@ -36,7 +36,7 @@ npm start  # Puerto 3001
 # Frontend (nuevo terminal)
 cd FRONT-END  
 npm install
-npm start   # Puerto 3002
+npm start   # Puerto 3000
 ```
 
 ## 🔧 Comandos
@@ -56,13 +56,6 @@ PUT /api/contacts/:id # Editar
 DELETE /api/contacts/:id # Borrar
 ```
 
-## 📊 Performance
-
-| Operación | Tiempo |
-|-----------|--------|
-| Inicial | ~800ms |
-| Búsqueda | ~300ms |
-| CRUD | ~1.5s |
 
 ## 🧪 Datos Prueba
 
